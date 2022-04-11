@@ -1,0 +1,22 @@
+{
+    "nome":"João Victor",
+    "sobrenome":"Bronzatti Guedes Ramos",
+    "Telefone": 119,
+    "ExemploDeArray": [
+        "exemplo1",
+        "exemplo2",
+        "etcc"
+    ],
+    "series": {
+        "melhor":"Peaky Blinders",
+        "netflix": {
+            "tier God": "Peaky Blinders",
+            "tier S": "Suits",
+            "outros": [
+                "One Punch",
+                "One Piece",
+                "Vih Tuber"
+            ]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import '' /* Não recomendo pois deixa o site lento*/
+
+:root{
+    font-size: 16px; /* MELHORES SÃO vw E vh, também em e rem */ 
+}
+h1 {
+    color:blue;
+    box-sizing: border-box;
+    margin: 12px 16px 10px 4px;
+    padding: 12px 16px;
+    /* MARGIN-TOP, MARGIN-RIGHT, MARGIN-BOTTOM, MARGIN-LEFT ---> PADDING IGUAL */
+}
+
+#ID {
+    color: cornflowerblue;
+    box-sizing: border-box;
+    margin: 12px 16px 0;/* Ambas as laterais 16PX*/
+}
+
+.classe {
+    color: darkblue;
+    box-sizing: border-box;
+    margin: 8px 16px; /*TOP E BOTTOM NO PRIMEIRO E LATERAIS NO SEGUNDO*/
+}
+
+/* display: block e inline */

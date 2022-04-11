@@ -1,0 +1,175 @@
+<!--<input> Atributos comuns
+    SUPORTE AO BROWSER: https://caniuse.com
+- autocomplete
+- autofocus
+- disabled
+- readonly (aceito por quase todos)
+- value
+- form (aceito por quase todos)
+- name
+- required (aceito por quase todos)
+- placeholder (password, search, tel, text, url...)(aceito por quase todos)
+- pattern
+- title
+- list
+- spellcheck
+- aria-label - leitura para acessibilidade
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form id="formzin" action="" method="get"> <!-- No Get os dados aparecem na URL, em POST os dados ficam escondidos-->
+<!-- NUNCA FAZER FORM DENTRO DE FORM! -->
+</form>
+
+<fieldset form="formzin">
+<legend>Um modo de fazer formulário -> fieldset</legend>
+<label for="">Nome:</label> <!--label é necessário para deficientes auditivos e outros-->
+<input type="text" name="" id="" autocomplete="name" autofocus>
+</fieldset>    
+
+<p></p>
+
+<form action="">
+<label for="label">
+    Nome:
+    <input id="label" type="text" autocomplete="name"> 
+</label>
+<button type="submit">Enviar</button>
+<button type="reset">Limpar</button>
+</form>
+
+<p></p>
+
+<form action="">
+Troxa: <input type="text" value="HAHA TROXA">
+<button type="reset">Clica aqui</button>
+</form>
+
+<p>
+    <input type="text" list="maisForte" 
+    placeholder="Escreva o nome do mais forte"/>
+    <datalist id="maisForte">
+        <option>Goku</option>
+        <option>Saitama</option>
+        <option>Seu pai</option>
+        <option>Eu</option>
+        <option>Cachorro</option>
+    </datalist>
+</p>
+<input type="color" name="" id="">
+<input type="date">
+<input type="file">
+<input type="">
+
+<form action="" method="post">
+<label for="senha">
+    Senha: <input type="password" id="senha" placeholder="Coloque sua senha"
+    required>
+    <button type="submit">Enviar</button>
+</label>
+</form>
+<!--Para senha:
+- pattern (requisitos para senha, bom junto com title)
+- title
+- inputmode (muda o teclado em mobile)
+- autocomplete (pega senhas salvas no browser)
+-->
+<p>
+    <form action="" method="post" enctype="multipart/form-data">
+         Envie seu arquivo: 
+<input type="file">
+</form></p>
+<!--
+    Value - 1 arquivo
+    accept - define tipo do arquivo
+    files - lista de arquivos
+-->
+
+<p><fieldset> Seleciona aí:
+    <div>
+        <input type="checkbox" name="che1" id="che1">
+        <label for="che1">Sou feio</label>
+    </div>
+    <div>
+        <input type="checkbox" name="che2" id="che2">
+        <label for="che2">Sou mais feio ainda</label>
+    </div>
+</fieldset></p>
+<!--
+    Subscribe = "on" ou
+    Value = "Oque quiser que apareça no back"
+    checked vem marcado já
+-->
+<input type="hidden" id="" name="" value="">
+<!--
+    Exemplo de aplicação: Guardar o horário de um envio
+    será recebido no back name=value
+-->
+<fieldset>
+    <legend>Você é feio?</legend>
+    <label for="S">Sim</label>
+    <input type="radio" id="S" name="feio" value="yep">
+    <label for="SS">Muuuuuito</label>
+    <input checked type="radio" id="SS" name="feio" value="muito">
+</fieldset>
+<p>
+    <label for="mes">Fale aí</label>
+</p>
+    <textarea name="backend" id="mes" cols="" rows=""></textarea>
+<!--
+    wrap - encaixa o tamanho da caixa no texto "on" "off" "soft" "hard"
+-->
+<p>
+    <label for="watchmen">Escolha o herói de Watchemn</label>
+    <select name="heroi" id="watchmen">
+        <option value="">Selecione seu super-herói</option>
+        <option value="monstrão">Rorschach</option>
+        <option value="comediante">Comediante</option>
+        <option value="OP">Dr. Manhatan</option>
+        <option value="cocô">Outros</option>
+    </select>
+</p>
+<!-- Backend: heroi=mosntrão ou heroi=OP etc...
+    multiple - habilita multiplas escolhas
+    size - tamanho da bagaça / aparece o scroll
+-->
+
+<p>
+    <label>Optgroup - Animal Favorito
+        <select name="animais" id="">
+            <optgroup label="Animais terrestres:">
+                <option value="leao">Leão</option>
+                <option value="urso">Urso</option>
+                <option value="lobo">Lobo</option>
+            </optgroup>
+            <optgroup label="Animais voadores:">
+                <option value="falcao">Falcão</option>
+                <option value="gaviao">Gavião</option>
+                <option value="codorna">Codorna</option>
+            </optgroup>
+        </select>
+    </label>
+</p>
+
+<p>
+    <label for="">Procurar:</label>
+    <input type="search" name="q" placeholder="Digite sua busca aqui">
+    <button>Pesquisar</button>
+</p>
+
+<p>
+    <label for="">numeros:</label>
+    <input type="number" min="-100" max="100" step="25">
+    <input type="range">
+</p>
+
+</body>
+</html>
